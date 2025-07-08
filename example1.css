@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1e2240;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* Header with right-aligned search */
+.header {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2e55;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+/* Tagline before search */
+.tagline {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  gap: 0.5rem;
+}
+
+.tagline .emoji,
+.tagline .text {
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #9b28ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+
+
+@media (min-width: 600px) {
+  .header {
+    flex-wrap: nowrap;
+  }
+
+  .tagline {
+    margin-bottom: 0;
+  }
+}
+
+/* Search input */
+.search {
+  background-color: #2f346b;
+  border: 2px solid #4c52a3;
+  border-radius: 30px;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  width: 200px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(76, 82, 163, 0.3);
+}
+
+.search::placeholder {
+  color: #a1a7ff;
+}
+
+.search:focus {
+  outline: none;
+  width: 280px;
+  background-color: #23285a;
+  box-shadow: 0 0 10px rgba(125, 133, 255, 0.6);
+  border-color: #7d85ff;
+}
+
+
+/* MAIN: 5-column fixed grid */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Auto-fit cards */
+  gap: 1.5rem;
+  padding: 2rem;
+  width: 100%;        /* Full screen */
+  max-width: 100vw;   /* No overflow */
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+/* Movie card */
+.movie {
+  background-color: #2b2e55;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover {
+  transform: scale(1.03);
+}
+
+/* Poster image */
+/* .movie img {
+  width: 150%;
+  height: 220px; /* Shorter height for consistent display */
+  /* object-fit: cover;
+  border-bottom: 1px solid #1e2240;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+} */ 
+ .movie img {
+  width: 100%;
+  height: 240px; /* slightly taller image */
+  object-fit: cover;
+}
+
+
+/* Title + Rating */
+.movie-info {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-info h3 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.movie-info span {
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: #1e2240;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+}
+
+.movie-info span.green {
+  color: #66e07f;
+}
+.movie-info span.orange {
+  color: #ffa500;
+}
+.movie-info span.red {
+  color: #ff6b6b;
+}
+
+/* Overview box */
+.overview {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+  background-color: #fff;
+  color: #111;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  font-size: 0.85rem;
+  /* text-align: justify; */
+  word-spacing: -0.1px;
+
+  overflow-y: auto; /* allows vertical scrolling */
+  scrollbar-width: thin; /* for Firefox */
+  scrollbar-color: #888 #eee; /* scroll color */
+}
+
+/* Optional: Chrome scrollbar style */
+.overview::-webkit-scrollbar {
+  width: 6px;
+}
+.overview::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+}
+

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e2240;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+}
+h1 {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emoji,
+.gradient-text {
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #9b28ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  animation: pulse 3s infinite;
+}
+
+
+.content p {
+ font-size: 0.85rem;         
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+
+/* Get Started Button */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* 🎬 Tagline below button */
+.sub-tagline {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #a1a7ff;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+.tagline-main {
+  font-size: 0.9rem;
+  color: #ddddff;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  text-align: center;
+
+  /* Add glow effect */
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.1),
+               0 0 6px rgba(128, 128, 255, 0.3);
+
+  /* Optional fade-in animation */
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
