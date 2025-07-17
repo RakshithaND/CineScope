@@ -26,10 +26,10 @@ Clone the repository:
    
 ## 📸 Snapshots
 
-### 🔹 Home Page
+🔹 Home Page
 <img width="1914" height="1056" alt="image" src="https://github.com/user-attachments/assets/9c312388-609d-4afa-8af0-ab3cf8c0a8a6" />
 
-### 🔹 Movie Card with Overview
+🔹 Movie Card with Overview
 <img width="1891" height="992" alt="image" src="https://github.com/user-attachments/assets/716ee2c5-14f0-42b7-8552-441fd2fc26f8" />
 
 
