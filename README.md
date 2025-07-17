@@ -18,12 +18,12 @@ CineScope is a simple and responsive movie recommendation web app built using HT
 - Fetch API for asynchronous data handling
 
 ## Getting Started
-
-1. Clone the repository:
+Clone the repository:
    git clone https://github.com/yourusername/cinescope.git
    Open home.html in your browser.
    Add your own TMDb API key in example.js:
-   const API_KEY = 'your_api_key_here';
+   const API_KEY = 'your_api_key_here';\
+   
 ## 📸 Snapshots
 
 ### 🔹 Home Page
