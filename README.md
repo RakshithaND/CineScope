@@ -1,5 +1,5 @@
 # 🎬 CineScope
-Live Demo: [Visit CineScope here 🚀](https://rakshithand.github.io/CineScope/)
+Live Demo: [Visit CineScope here](https://rakshithand.github.io/CineScope/)
 
 
 CineScope is a simple and responsive movie recommendation web app built using HTML, CSS, and JavaScript. It uses the TMDb API to fetch real-time movie data including posters, ratings, and overviews. Users can search for any movie and scroll through trending and top-rated films easily.
